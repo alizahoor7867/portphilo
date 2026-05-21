@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowRight, Github, Linkedin, Mail, Download } from 'lucide-react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei'
 
@@ -52,9 +52,11 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="mb-6"
           >
-            <span className="inline-block px-6 py-2 rounded-full glass text-primary-400 font-semibold text-sm tracking-wider">
-              Welcome to my portfolio 👋
-            </span>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <span className="inline-block px-4 py-1.5 rounded-full glass text-primary-400 font-semibold text-xs tracking-wider">🚀 3+ Live Projects Running</span>
+              <span className="inline-block px-4 py-1.5 rounded-full glass text-accent-400 font-semibold text-xs tracking-wider">💼 15+ Practice Projects</span>
+              <span className="inline-block px-4 py-1.5 rounded-full glass text-green-400 font-semibold text-xs tracking-wider">🏆 3+ Certifications</span>
+            </div>
           </motion.div>
 
           {/* Name */}
@@ -99,8 +101,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg md:text-xl text-slate-300 mb-12 max-w-2xl mx-auto"
           >
-            Building modern, scalable, and user-friendly web applications with cutting-edge technologies
-            and AI-powered solutions
+            Turning ideas into reality through clean code, sleepless nights, and sheer determination — because great web experiences don't build themselves.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -124,6 +125,14 @@ export default function Hero() {
               <Mail className="w-5 h-5" />
               Hire Me
             </button>
+            <a
+              href="/newalicvpdf (1).pdf"
+              download
+              className="btn btn-secondary flex items-center gap-2 border-green-500/50 text-green-400 hover:border-green-400"
+            >
+              <Download className="w-5 h-5" />
+              Resume
+            </a>
           </motion.div>
 
           {/* Social Links */}
@@ -134,7 +143,7 @@ export default function Hero() {
             className="mt-12 flex gap-6 justify-center"
           >
             <a
-              href="https://github.com"
+              href="https://github.com/alizahoor7867"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass rounded-full hover-glow transition-all"
@@ -142,7 +151,7 @@ export default function Hero() {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/hafiz-ali-zahoor-b4b88a25b/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass rounded-full hover-glow transition-all"
@@ -150,7 +159,9 @@ export default function Hero() {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:az3269868@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&to=az3269868@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-3 glass rounded-full hover-glow transition-all"
             >
               <Mail className="w-6 h-6" />

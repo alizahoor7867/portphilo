@@ -9,68 +9,42 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 export default function Projects() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
-
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
   const [selectedProject, setSelectedProject] = useState(null)
 
   const projects = [
     {
       id: 1,
-      title: 'AI-Powered E-Commerce Platform',
-      description:
-        'A modern e-commerce platform with AI-powered product recommendations and chatbot assistance.',
-      fullDescription:
-        'Built a complete e-commerce solution with personalized shopping experiences using machine learning algorithms. Features include real-time inventory management, secure payment processing, and an AI chatbot that helps users find products.',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&auto=format&fit=crop',
-      tech: ['React', 'Node.js', 'MongoDB', 'OpenAI', 'Stripe'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      aiSummary:
-        'This project showcases expertise in full-stack development and AI integration, demonstrating the ability to build scalable applications with intelligent features.',
+      title: 'Iqras LMS',
+      description: 'A live Learning Management System with student records, fee management, and academic tracking.',
+      fullDescription: 'A fully functional live Learning Management System (LMS) built for real-world use. Features include student enrollment, fee management, attendance tracking, result management, and admin dashboard.',
+      image: '/iqrass.png',
+      tech: ['.NET Core', 'Angular', 'SQL Server', 'Bootstrap', 'C#'],
+      github: 'https://github.com/alizahoor7867',
+      live: 'https://iqrass.com/',
+      aiSummary: 'This live project demonstrates real-world full stack development skills with .NET & Angular, handling complex school operations efficiently.',
     },
     {
       id: 2,
-      title: 'Real-Time Collaboration Tool',
-      description:
-        'Slack-like collaboration platform with real-time messaging and video conferencing.',
-      fullDescription:
-        'Developed a comprehensive team collaboration tool featuring real-time chat, file sharing, video calls, and project management capabilities. Implemented WebSocket communication for instant updates.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&auto=format&fit=crop',
-      tech: ['React', 'Socket.io', 'WebRTC', 'PostgreSQL', 'Docker'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      aiSummary:
-        'Demonstrates advanced real-time communication implementation and scalable architecture design.',
+      title: 'StayNexus Agency',
+      description: 'A live real estate & stay booking agency website with property listings and booking system.',
+      fullDescription: 'A professional live agency website for StayNexus, featuring property listings, booking management, contact forms, and a modern responsive design tailored for real estate and hospitality.',
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop',
+      tech: ['React', 'Node.js', 'Tailwind CSS', 'MongoDB'],
+      github: 'https://github.com/alizahoor7867',
+      live: 'https://staynexus.agency/',
+      aiSummary: 'This live project showcases expertise in building professional agency websites with modern UI/UX and real booking functionality.',
     },
     {
       id: 3,
-      title: 'Healthcare Management System',
-      description:
-        'Complete hospital management system with patient records and appointment scheduling.',
-      fullDescription:
-        'Created a HIPAA-compliant healthcare platform for managing patient information, appointments, prescriptions, and medical records. Includes role-based access control and audit logging.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop',
-      tech: ['.NET Core', 'React', 'SQL Server', 'Azure', 'Redis'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      aiSummary:
-        'Shows proficiency in building secure, enterprise-level applications with complex business logic.',
-    },
-    {
-      id: 4,
-      title: 'Smart Home Dashboard',
-      description: 'IoT dashboard for controlling and monitoring smart home devices.',
-      fullDescription:
-        'Built an intuitive dashboard for managing IoT devices with real-time data visualization, automation rules, and energy consumption tracking. Supports integration with multiple smart home protocols.',
-      image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop',
-      tech: ['Next.js', 'TypeScript', 'MQTT', 'InfluxDB', 'Tailwind'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      aiSummary:
-        'Highlights expertise in IoT integration and real-time data processing.',
+      title: 'CharityTrak',
+      description: 'A live charity management platform for tracking donations, campaigns, and fundraising activities.',
+      fullDescription: 'A fully functional live charity management system. Features include donation tracking, campaign management, donor records, fundraising analytics, and an admin dashboard for managing all charity operations.',
+      image: '/cherity.png',
+      tech: ['React', 'Node.js', 'SQL Server', 'Tailwind CSS'],
+      github: 'https://github.com/alizahoor7867',
+      live: 'https://charitytrak.com/',
+      aiSummary: 'This live project demonstrates expertise in building impactful real-world platforms with React & Node.js, handling complex donation and campaign management workflows.',
     },
   ]
 
@@ -81,7 +55,6 @@ export default function Projects() {
       ref={ref}
     >
       <div className="container mx-auto max-w-7xl">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -93,11 +66,10 @@ export default function Projects() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto mb-4"></div>
           <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-            A showcase of my recent work in web development and AI integration
+            Real live projects running in production — built with passion and hard work
           </p>
         </motion.div>
 
-        {/* Projects Carousel */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -117,12 +89,12 @@ export default function Projects() {
             }}
             className="pb-16"
           >
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <SwiperSlide key={project.id}>
-                <div className="card h-full flex flex-col group cursor-pointer"
+                <div
+                  className="card h-full flex flex-col group cursor-pointer"
                   onClick={() => setSelectedProject(project)}
                 >
-                  {/* Project Image */}
                   <div className="relative overflow-hidden rounded-lg mb-4 h-48">
                     <img
                       src={project.image}
@@ -130,27 +102,21 @@ export default function Projects() {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+                    <span className="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                      🟢 Live
+                    </span>
                   </div>
-
-                  {/* Project Info */}
                   <h3 className="text-xl font-bold mb-2 group-hover:text-primary-400 transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-slate-400 mb-4 flex-grow">{project.description}</p>
-
-                  {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 text-xs rounded-full glass border border-primary-500/30 text-primary-400"
-                      >
+                    {project.tech.map((tech, i) => (
+                      <span key={i} className="px-3 py-1 text-xs rounded-full glass border border-primary-500/30 text-primary-400">
                         {tech}
                       </span>
                     ))}
                   </div>
-
-                  {/* Links */}
                   <div className="flex gap-4">
                     <a
                       href={project.github}
@@ -159,18 +125,16 @@ export default function Projects() {
                       className="flex items-center gap-2 text-slate-300 hover:text-primary-400 transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Github className="w-4 h-4" />
-                      Code
+                      <Github className="w-4 h-4" /> Code
                     </a>
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-slate-300 hover:text-primary-400 transition-colors"
+                      className="flex items-center gap-2 text-slate-300 hover:text-accent-400 transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
+                      <ExternalLink className="w-4 h-4" /> Live Demo
                     </a>
                   </div>
                 </div>
@@ -179,7 +143,6 @@ export default function Projects() {
           </Swiper>
         </motion.div>
 
-        {/* Project Modal */}
         {selectedProject && (
           <div
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
@@ -195,48 +158,32 @@ export default function Projects() {
               <div className="relative">
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 p-2 glass rounded-full hover:bg-red-500/20 transition-colors"
+                  className="absolute top-4 right-4 p-2 glass rounded-full hover:bg-red-500/20 transition-colors z-10"
                 >
                   <X className="w-6 h-6" />
                 </button>
-
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
                   className="w-full h-64 object-cover rounded-t-2xl"
                 />
-
                 <div className="p-8">
-                  <h3 className="text-3xl font-bold mb-4 gradient-text">
-                    {selectedProject.title}
-                  </h3>
-                  <p className="text-slate-300 text-lg mb-6">
-                    {selectedProject.fullDescription}
-                  </p>
-
+                  <h3 className="text-3xl font-bold mb-4 gradient-text">{selectedProject.title}</h3>
+                  <p className="text-slate-300 text-lg mb-6">{selectedProject.fullDescription}</p>
                   <div className="mb-6">
-                    <h4 className="text-xl font-semibold mb-3 text-primary-400">
-                      Technologies Used
-                    </h4>
+                    <h4 className="text-xl font-semibold mb-3 text-primary-400">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
-                      {selectedProject.tech.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-4 py-2 rounded-lg glass border border-primary-500/30 text-primary-400"
-                        >
+                      {selectedProject.tech.map((tech, i) => (
+                        <span key={i} className="px-4 py-2 rounded-lg glass border border-primary-500/30 text-primary-400">
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
-
                   <div className="mb-6 p-4 rounded-lg bg-accent-500/10 border border-accent-500/30">
-                    <h4 className="text-lg font-semibold mb-2 text-accent-400 flex items-center gap-2">
-                      🤖 AI Analysis
-                    </h4>
+                    <h4 className="text-lg font-semibold mb-2 text-accent-400">🤖 AI Analysis</h4>
                     <p className="text-slate-300">{selectedProject.aiSummary}</p>
                   </div>
-
                   <div className="flex gap-4">
                     <a
                       href={selectedProject.github}
@@ -244,8 +191,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="btn btn-primary flex items-center gap-2"
                     >
-                      <Github className="w-5 h-5" />
-                      View Code
+                      <Github className="w-5 h-5" /> View Code
                     </a>
                     <a
                       href={selectedProject.live}
@@ -253,8 +199,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="btn btn-secondary flex items-center gap-2"
                     >
-                      <ExternalLink className="w-5 h-5" />
-                      Live Demo
+                      <ExternalLink className="w-5 h-5" /> Live Demo
                     </a>
                   </div>
                 </div>

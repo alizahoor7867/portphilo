@@ -6,7 +6,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
-import AIAssistant from './components/AIAssistant'
+import { FaWhatsapp } from 'react-icons/fa'
 
 function App() {
   // Initialize smooth scroll
@@ -48,8 +48,16 @@ function App() {
         <Projects />
         <Contact />
 
-        {/* AI Assistant - Floating */}
-        <AIAssistant />
+        {/* WhatsApp Floating Button */}
+        <a
+          href="https://wa.me/923120279996"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-lg hover:scale-110 transition-transform"
+          style={{ backgroundColor: '#25D366' }}
+        >
+          <FaWhatsapp className="w-7 h-7 text-white" style={{ fontSize: '28px' }} />
+        </a>
 
         {/* Background decorations */}
         <div className="fixed top-0 left-0 w-full h-full pointer-events-none -z-10">

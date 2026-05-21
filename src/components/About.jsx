@@ -10,17 +10,17 @@ export default function About() {
   })
 
   const stats = [
-    { icon: Code2, value: 4, suffix: '+', label: 'Years Experience' },
-    { icon: Rocket, value: 50, suffix: '+', label: 'Projects Completed' },
-    { icon: Award, value: 15, suffix: '+', label: 'Certifications' },
+    { icon: Code2, value: 3, suffix: '+', label: 'Live Projects Running' },
+    { icon: Rocket, value: 15, suffix: '+', label: 'Practice Projects' },
+    { icon: Award, value: 3, suffix: '+', label: 'Certifications' },
     { icon: Coffee, value: 1000, suffix: '+', label: 'Cups of Coffee' },
   ]
 
   const techStack = [
     { category: 'Frontend', skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'] },
-    { category: 'Backend', skills: ['Node.js', 'Express', '.NET', 'MongoDB'] },
-    { category: 'Tools', skills: ['Git', 'Docker', 'AWS', 'VS Code'] },
-    { category: 'AI/ML', skills: ['LangChain', 'OpenAI', 'TensorFlow', 'Python'] },
+    { category: 'Backend', skills: ['Node.js', 'Express', '.NET', 'PHP & Laravel'] },
+    { category: 'Mobile App', skills: ['React Native', 'Expo', 'Android', 'iOS'] },
+    { category: 'Digital Marketing', skills: ['SEO', 'Google Ads', 'Social Media', 'Analytics'] },
   ]
 
   return (
@@ -44,28 +44,35 @@ export default function About() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Story */}
+          {/* Profile Picture */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col items-center gap-8"
           >
-            <h3 className="text-3xl font-bold mb-6 gradient-text">
-              Full Stack Developer & Tech Enthusiast
-            </h3>
-            <p className="text-slate-300 text-lg mb-6">
-              I'm a passionate Full Stack Developer with expertise in building modern, scalable web
-              applications. My journey in tech started with a curiosity about how things work, and
-              it has evolved into a career of creating innovative solutions.
+            <div className="relative">
+              <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-primary-500/50 shadow-2xl shadow-primary-500/20">
+                <img
+                  src="/ali.jpeg"
+                  alt="Hafiz Ali Zahoor"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-3 -right-3 bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                ✅ Available for Work
+              </div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-500/20 to-accent-500/20 animate-pulse"></div>
+            </div>
+            <h3 className="text-3xl font-bold gradient-text">Full Stack Web Developer</h3>
+            <p className="text-slate-300 text-lg text-center">
+              I'm a dedicated Full Stack Web Developer who believes in hard work, consistency, and writing code that actually works. I don't just build websites — I craft digital experiences that leave an impression.
             </p>
-            <p className="text-slate-300 text-lg mb-6">
-              I specialize in the MERN stack, .NET, and modern frontend frameworks. Recently, I've
-              been diving deep into AI and machine learning, integrating intelligent features into
-              web applications using LangChain and OpenAI.
+            <p className="text-slate-300 text-lg text-center">
+              From pixel-perfect frontends to robust backends, I've worked on 3+ live running projects and 15+ practice projects. I hold certifications in SEO, Digital Marketing, and Full Stack Web Development.
             </p>
-            <p className="text-slate-300 text-lg">
-              When I'm not coding, you'll find me exploring new technologies, contributing to
-              open-source projects, or sharing knowledge with the developer community.
+            <p className="text-slate-300 text-lg text-center">
+              Every line of code I write is backed by hours of learning, failing, and improving. That's the only way I know how to grow.
             </p>
           </motion.div>
 
