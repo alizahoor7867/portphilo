@@ -1,0 +1,395 @@
+.body{
+    background-color: black;
+    overflow-x: hidden !important;
+}
+.navbar{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+}
+
+.menu{
+    padding: 10px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px 0 20px;
+    list-style: none;
+}
+li>a{
+    text-decoration: none;
+    color: antiquewhite;
+
+}
+
+
+.logob{
+    color: white;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.text-red {
+  color: red;
+}
+
+.my-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-right: 10rem;
+}
+.my-button i {
+    color: white;
+}
+.my-button p {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.my-button:hover {
+    border-color: brown;
+    color: brown;
+}
+.my-button:hover i,
+.my-button:hover p {
+    color: brown;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 10px;
+}
+.dot {
+    font-size: 24px;
+}
+.red-dot {
+    color: red;
+}
+.white-dot {
+    color: white;
+}
+.logo-text {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+.logo-highlight {
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+.dot:hover{
+    color: rgb(255, 255, 255);
+}
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 40px;
+    width: 60px;
+    margin-right: 20px;
+}
+.icon-line {
+    width: 40px;
+    height: 3px;
+    background-color: white;
+    transform-origin: right;
+    transform: rotate(45deg);
+    animation: line-animation 1s infinite ease-in-out;
+}
+.icon:hover{
+    color: brown;
+}
+
+.col-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.social-icons {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons li {
+  margin: 15px 0;
+}
+
+.social-icons li a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-icons li a:hover {
+  color: red;
+}
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.scroll-line {
+  width: 2px;
+  height: 100px;
+  background-color: red;
+}
+
+.scroll-circle {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.scroll-text {
+  writing-mode: vertical-rl;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.card1{
+    background-color: black;
+}
+
+.card img{
+    width: 80px;
+}
+
+.txt:hover{
+    color: brown;
+}
+
+.white {
+    color: white;
+    margin: 15rem;
+}
+.white h1 {
+    font-size: 120px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    line-height: 0.8;
+}
+
+.white h1, .white p{
+    display: inline-block !important;
+}
+
+.white .col-3{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.white p{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.vertical-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card .card-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 16px;
+}
+
+.card:hover .card-body {
+    transform: translateY(0);
+}
+
+.card img {
+    transition: opacity 0.3s ease;
+}
+
+.card:hover img {
+    opacity: 0.5;
+}
+
+.div-class {
+    margin: 0;
+    padding: 0;
+}
+.div-class {
+    box-sizing: border-box;
+}
+.overlay{
+    background-color: #0009;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    bottom: 0%;
+    position: absolute;
+    color: #fff;
+    transition: all .5s;
+    height: 0;
+}
+.card.white.container:hover .overlay {
+    height: 50%;
+    opacity: 1;
+}
+.card.white.container{
+    overflow: hidden;
+}
+.col-4{
+    height: auto;
+}
+
+/* Media Queries for responsiveness */
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .menu li {
+    margin: 0 10px;
+  }
+
+  .logo-text, .logo-highlight {
+    font-size: 30px;
+  }
+
+  .my-button {
+    padding: 8px 16px;
+    margin-right: 5rem;
+  }
+
+  .social-icons li a {
+    font-size: 20px;
+  }
+
+  .card-body h5, .card-body p {
+    text-align: center;
+  }
+
+  .card img {
+    width: 100px;
+  }
+
+  .col-6 img {
+    width: 100%;
+  }
+}
+
+/* Mobile devices (max-width: 576px) */
+@media screen and (max-width: 576px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-text, .logo-highlight {
+    font-size: 24px;
+  }
+
+  .my-button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .social-icons {
+    flex-direction: row;
+  }
+
+  .col-4, .col-3, .col-6 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    font-size: 30px;
+  }
+
+  .scroll-text {
+    font-size: 12px;
+  }
+
+  .scroll-line {
+    height: 50px;
+  }
+}
+
+/* Large screens (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+  .menu li {
+    margin: 0 30px;
+  }
+
+  .my-button {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+
+  .logo-text, .logo-highlight {
+    font-size: 50px;
+  }
+
+  .card img {
+    width: 150px;
+  }
+}
+::-webkit-scrollbar{
+    display: none;
+}

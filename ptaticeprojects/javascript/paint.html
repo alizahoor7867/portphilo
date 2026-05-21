@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .size1 {
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+        .size2 {
+            width: 20px;
+            height: 20px;
+        }
+        .size3 {
+            width: 30px;
+            height: 30px;
+        }  
+        .size4 {
+            width: 40px;
+            height: 40px;
+        }
+        .size, .color {
+            cursor: pointer;
+        }
+        .Line {
+            width: 10px;
+            height: 20px;
+            position: absolute;
+            transition: all 0.8s;
+        }
+    </style>
+</head>
+<body>
+    <div class="card p-5 border-0 shadow container">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex gap-3 align-items-center">
+                <div class="size size1 rounded-circle border border-dark"></div>
+                <div class="size size2 rounded-circle border border-dark"></div>
+                <div class="size size3 rounded-circle border border-dark"></div>
+                <div class="size size4 rounded-circle border border-dark"></div>
+            </div>
+            <div class="d-flex gap-3">
+                <div class="color color1 p-4 bg-danger rounded-circle border"></div>
+                <div class="color color2 p-4 bg-primary rounded-circle border"></div>
+                <div class="color color3 p-4 bg-success rounded-circle border"></div>
+                <div class="color color4 p-4 bg-info rounded-circle border"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container canvas shadow-lg p-0 my-5 position-relative" style="height: 70vh;"></div>
+
+    <!-- JavaScript -->
+    <script>
+        let size = document.querySelectorAll('.size');
+        let color = document.querySelectorAll('.color');
+        let canvas = document.querySelector('.canvas');
+        let line;
+        
+        let size1 = false;
+        let size2 = false;
+        let size3 = false;
+        let size4 = false;
+
+        let color1 = false;
+        let color2 = false;
+        let color3 = false;
+        let color4 = false;
+
+        // Handle size selection
+        size.forEach((item) => {
+            item.addEventListener('click', () => {
+                if (item.classList.contains('size1')) {
+                    size1 = true;
+                    size2 = false;
+                    size3 = false;
+                    size4 = false;
+                    alert("Size one is clicked");
+                } else if (item.classList.contains('size2')) {
+                    size1 = false;
+                    size2 = true;
+                    size3 = false;
+                    size4 = false;
+                    alert("Size 2 is clicked");
+                } else if (item.classList.contains('size3')) {
+                    size1 = false;
+                    size2 = false;
+                    size3 = true;
+                    size4 = false;
+                    alert("Size 3 is clicked");
+                } else {
+                    size1 = false;
+                    size2 = false;
+                    size3 = false;
+                    size4 = true;
+                    alert("Size 4 is clicked");
+                }
+            });
+        });
+
+        // Handle color selection
+        color.forEach((item) => {
+            item.addEventListener('click', () => {
+                if (item.classList.contains('color1')) {
+                    color1 = true;
+                    color2 = false;
+                    color3 = false;
+                    color4 = false;
+                    alert("Red color is selected");
+                } else if (item.classList.contains('color2')) {
+                    color1 = false;
+                    color2 = true;
+                    color3 = false;
+                    color4 = false;
+                    alert("Blue color is selected");
+                } else if (item.classList.contains('color3')) {
+                    color1 = false;
+                    color2 = false;
+                    color3 = true;
+                    color4 = false;
+                    alert("Green color is selected");
+                } else {
+                    color1 = false;
+                    color2 = false;
+                    color3 = false;
+                    color4 = true;
+                    alert("Cyan color is selected");
+                }
+            });
+        });
+
+
+
+        let mousedown=false;
+
+
+
+
+
+        canvas.addEventListener('mousedown',()=>{
+
+             mousedown=true;
+            // console.log('mouse is down');
+
+
+        })
+        canvas.addEventListener('mouseup',()=>{
+
+             mousedown=false;
+            // console.log('mouse is up');
+
+        })
+
+        // Handle drawing lines based on mouse movement, selected size, and color
+        canvas.addEventListener('mousemove', (e) => {
+            if(mousedown){
+                let convascordinates = canvas.getBoundingClientRect();
+            const { clientX, clientY } = e;
+            const x = clientX - convascordinates.left;
+            const y = clientY - convascordinates.top;
+
+             line = document.createElement('div');
+            canvas.appendChild(line);
+            line.classList.add('Line');
+            line.style.transform = `translate(${x}px, ${y}px)`;
+
+            // Apply size class
+            if (size1) {
+                line.classList.add('size1');
+            } else if (size2) {
+                line.classList.add('size2');
+            } else if (size3) {
+                line.classList.add('size3');
+            } else if (size4) {
+                line.classList.add('size4');
+            }
+
+            // Apply color class
+            if (color1) {
+                line.style.backgroundColor = 'red';
+            } else if (color2) {
+                line.style.backgroundColor = 'blue';
+            } else if (color3) {
+                line.style.backgroundColor = 'green';
+            } else if (color4) {
+                line.style.backgroundColor = 'cyan';
+            }
+            }
+            
+        });
+    </script>
+</body>
+</html>

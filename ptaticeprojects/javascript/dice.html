@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-6">
+            <div class="card shadow border-0 p-4" >
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqnVrssRUMQpK8Cf4PaPjGmMgOsQKSQIS2_w&s" alt="" class="p1" width="100%" height="200px" style="object-fit: contain;">
+                <button class=" btn btn-warning btn1">RoleDice</button>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card shadow border-0 p-4" >
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqnVrssRUMQpK8Cf4PaPjGmMgOsQKSQIS2_w&s" alt="" class="p2"width="100%" height="200px" style="object-fit: contain;">
+                <button disabled class=" btn btn-warning btn2">RoleDice</button>
+            </div>
+        </div>  
+        <h1 class="display-1 text-center fw-bold win"></h1>  
+    </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+        let img1 = document.querySelectorAll('img');
+        let btns = document.querySelectorAll('.btn');
+        let win=document.querySelector('.win');
+        const faces = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png"];
+        
+        const randumnumber = () => {
+            const random = Math.random() * faces.length; // Capital 'M' for Math
+            const floor = Math.floor(random); // Capital 'M' for Math
+            return floor;
+        };
+
+        let count1;
+        let count2;
+        
+        btns.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        if (item.classList.contains('btn1')) {
+            count1 = randumnumber();
+            img1[0].src = `${faces[count1]}`;
+            btns[0].disabled = true;  // Corrected 'disapled' to 'disabled'
+            btns[1].disabled = false; // Corrected 'disapled' to 'disabled'
+        } else {
+            count2 = randumnumber();
+            img1[1].src = `${faces[count2]} `;
+            if (count1 > count2) {
+                win.innerHTML = 'player one is win';
+            } else if (count1 < count2) {
+                win.innerHTML = 'player two is win';
+            } else {
+                win.innerHTML = 'match draw';
+            }
+            btns[0].disabled = false; // Corrected 'disapled' to 'disabled'
+            btns[1].disabled = true;  // Corrected 'disapled' to 'disabled'
+        }
+    });
+});
+
+    </script>
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+.app-section {
+    background: linear-gradient(90deg, #fdf055 0%, #febf03 100%);
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    margin: 40px 0;
+    position: relative;
+  }
+
+  .app-section .pizza-icon {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+  }
+
+  .app-section img.phone-image {
+    max-width: 250px;
+    height: auto;
+    border-radius: 20px;
+    margin-right: 20px;
+  }
+
+  .app-section .app-info {
+    max-width: 60%;
+  }
+
+  .app-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .app-section p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  .app-section .profile-images {
+    display: flex;
+    margin: 20px 0;
+  }
+
+  .app-section .profile-images img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid white;
+  }
+
+  .app-section .app-buttons img {
+    width: 150px;
+    margin-right: 10px;
+  }
+
+  .app-section .arrow-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff5a00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+  }
+  
+  #navbarNav ul{
+    border-radius: 70%;
+  }
+
+
+  .img-bg {
+    background-image: url('/images/offer.1a1809b0.svg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+h1{
+  font-size: 20px;
+}

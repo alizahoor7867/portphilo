@@ -1,0 +1,277 @@
+.body{
+    background-color: black;
+}
+.navbar{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+    color: white;
+}
+
+.menu{
+    padding: 10px;
+    
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px 0 20px;
+    list-style: none;
+}
+li>a{
+    text-decoration: none;
+    color: antiquewhite;
+    text-decoration: none;
+
+
+}
+
+
+.logo{
+    color: #00F5BC;
+}
+ul li>a:hover{
+    color: #ffffff;
+
+}
+h3{
+    color: #f51d00;
+
+}
+
+  
+
+p{
+    text-align: center;
+    font-size: 20px;
+    
+}
+.center{
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50% ,-50%);
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    font-size: 24px; /* Adjust this size as needed */
+    color: #00F5BC;
+
+
+    font-size: 50px;
+
+    
+    
+  }
+  .section{
+    color: #ffffff;
+    align-items: center;
+    
+  }
+  .col-6 img {
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+    max-width: 100%; /* Ensures the image fits within the column */
+  }
+  .small-img {
+    width: 100%;
+    height: 30%;
+    border-radius: 50px;
+   
+    
+  }
+.image-container {
+    position: relative;
+    margin: 0 auto;
+    width: 300px; /* Adjust size as per need */
+    height: 300px;
+}
+
+/* Blob - the animated background */
+.blob {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+    width: 320px; /* Slightly larger than the image */
+    height: 320px;
+    background-color: #00aa88; /* Change to desired color */
+    border-radius: 50%;
+    z-index: -1; /* Ensure the blob stays behind the image */
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+        
+
+}
+
+
+/* Image wrapper */
+.profile-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1; /* Image above the blob */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20% 80% 70% 30% / 50% 40% 60% 50%; /* Rounded corners */
+}
+
+/* Continuous 360-degree rotation animation */
+@keyframes animation {
+    from {
+        transform: rotate(0deg);
+        border-radius: 0%; /* Start with square corners */
+    }
+    to {
+        transform: rotate(360deg);
+        border-radius: 50%; /* End with circular corners */
+    }
+}
+
+
+
+
+.tex{
+    float: left;
+    font-size: 30px;
+    font-weight: 200px;
+    
+}
+.row {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align items to the right */
+    padding: 10px; /* Optional padding */
+    font-size: 30px;
+    font-weight: 200px;
+    
+}
+
+.text {
+    color: white; /* Ensure the text color is white */
+}
+
+
+
+.single-card {
+    /* display: ; */
+    position: relative; /* Position relative for absolute positioning of text */
+    width: 100%; /* Adjust the width as needed */
+    background-color: rgb(151, 142, 114);
+    padding: 10px;
+    border-radius: 8px; /* Optional for rounded corners */
+}
+
+.skill-icon {
+    display: flex;
+ 
+    position: relative; /* Position relative for the image */
+    display: inline-block; 
+    /* Ensure the image and text are inline */
+}
+
+.skill-icon img {
+    width: 50px; /* Set the size of the image */
+    height: 50px; /* Keep the aspect ratio */
+ /* Optional for a circular image */
+}
+
+.skill-name {
+    position: absolute; /* Position text over the image */
+    top: 70%; /* Center the text vertically */
+    left: 40%; /* Position text to the right of the image */
+    transform: translate(-50%, -50%); /* Center the text horizontally */
+    color: rgb(0, 0, 0); /* Adjust text color */
+    font-weight: bold; /* Optional for emphasis */
+}
+.card-img-top{
+    width: 100px;
+    height: 20vh;
+}
+
+
+
+
+.form-group {
+    background-color: #000000;
+    width: 100%; /* Full width */
+    padding: 12px; /* Larger padding */
+    font-size: 20px; /* Larger font size */
+    margin: 10px 0; /* Space between input fields */
+    border-radius: 40px; /* Rounded corners */
+    border: 2px solid #000000; /* Default thin border */
+    transition: border-color 0.3s ease, border-width 0.3s ease; /* Smooth transition */
+}
+
+.form-group {
+    
+    width: 100%; /* Make the input field full width relative to the form */
+    padding: 12px; /* Larger padding */
+    font-size: 20px; /* Larger font size */
+    margin: 10px 0; /* Space between input fields */
+    border-radius: 40px; /* Rounded corners */
+    border: 2px solid #d3d3d3; /* Default border */
+    transition: border-color 0.3s ease, border-width 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.form-group:focus {
+    border-color: #d3d3d3; /* Change border color to green when focused */
+    border-width: 3px; /* Make the border thicker when focused */
+    box-shadow: 0 0 10px rgb(21, 215, 21); /* Add a green shadow around the input */
+    outline: none; /* Remove default outline */
+}
+
+textarea {
+    background-color: #000000;
+    width: 100%; /* Full width relative to the form */
+    height: 150px; /* Larger height for textarea */
+    padding: 12px; /* Padding */
+    font-size: 13px; /* Font size */
+    margin: 10px 0; /* Space */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #d3d3d3; /* Default border */
+    transition: border-color 0.3s ease, border-width 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+textarea:focus {
+    border-color: #d3d3d3; /* Change border color to green when focused */
+    border-width: 3px; /* Make the border thicker when focused */
+    box-shadow: 0 0 10px hsl(120, 100%, 49%); /* Add a green shadow around the textarea */
+    outline: none; /* Remove default outline */
+}
+
+.form {
+    width: 100%; /* Full width of the container */
+    max-width: 100%; /* Set to take full width of its parent container */
+    margin: 0 auto; /* Center the form */
+    padding: 20px; /* Add padding around the form */
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 10vh; /* Full viewport height */
+}
+
+.button { 
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #00aa88;
+    color: rgb(0, 0, 0); /* Changed to black for contrast */
+    border: 2px solid black;
+    transition: background-color 0.3s ease;
+    width: 800px; /* Set a specific width */
+}

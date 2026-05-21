@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="heading">hewllowwordls</h1>
+    
+    <button id="btn">Click</button>
+
+<script>
+    let head = document.querySelector('.heading');  // Selects the first element in the NodeList
+    let btn = document.querySelector("#btn");
+
+    btn.addEventListener('click', () => {
+        // head.innerHTML = 'hi ali';
+        if(head.innerHTML== 'hewllowwordls'){
+                     head.innerHTML = 'hi ali';
+                     head.style.color='blue';
+
+                     
+        }
+        else 
+        {
+            head.innerHTML = 'hewllowwordls';
+            head.style.color='red';
+
+        }
+    });
+
+
+
+
+ 
+
+    </script>
+    
+</body>
+</html>
+
+

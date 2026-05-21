@@ -5,8 +5,11 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import PracticeProjects from './components/PracticeProjects'
 import Contact from './components/Contact'
 import { FaWhatsapp } from 'react-icons/fa'
+import CustomCursor from './components/CustomCursor'
+import ParticleBackground from './components/ParticleBackground'
 
 function App() {
   // Initialize smooth scroll
@@ -40,12 +43,15 @@ function App() {
         <meta name="keywords" content="Full Stack Developer, React, Node.js, .NET, Portfolio, Web Development" />
       </Helmet>
 
-      <div className="relative">
+      <CustomCursor />
+      <ParticleBackground />
+      <div className="relative" style={{ zIndex: 2 }}>
         {/* Main Content */}
         <Hero />
         <About />
         <Skills />
         <Projects />
+        <PracticeProjects />
         <Contact />
 
         {/* WhatsApp Floating Button */}
@@ -59,10 +65,10 @@ function App() {
           <FaWhatsapp className="w-7 h-7 text-white" style={{ fontSize: '28px' }} />
         </a>
 
-        {/* Background decorations */}
-        <div className="fixed top-0 left-0 w-full h-full pointer-events-none -z-10">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl"></div>
+        {/* Background blobs */}
+        <div className="fixed top-0 left-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay:'1s'}}></div>
         </div>
       </div>
     </>

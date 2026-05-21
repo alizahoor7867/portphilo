@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup Design</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 250px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Video Section */
+.video-section {
+    border: 2px solid black;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: lightblue; /* Color for video section */
+}
+
+.video-display {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Content Section */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.content-box {
+    height: 40px;
+    border: 2px solid black;
+}
+
+/* Adding different colors for each content box */
+.content-box:nth-child(1) {
+    background-color: lightgreen;
+}
+
+.content-box:nth-child(2) {
+    background-color: lightcoral;
+}
+
+.content-box:nth-child(3) {
+    background-color: lightgoldenrodyellow;
+}
+
+/* Navigation Section */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-button {
+    border: 2px solid black;
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* Adding colors for navigation buttons */
+.circle-button {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: lightgray; /* Circle button color */
+}
+
+.left-arrow {
+    background-color: lightpink; /* Left arrow button color */
+}
+
+.right-arrow {
+    background-color: lightyellow; /* Right arrow button color */
+}
+
+.left-arrow, .right-arrow {
+    font-size: 18px;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <!-- Top video section -->
+        <div class="video-section">
+            <div class="video-display">Video Playing</div>
+        </div>
+
+        <!-- Content sections -->
+        <div class="content-section">
+            <div class="content-box"></div>
+            <div class="content-box"></div>
+            <div class="content-box"></div>
+        </div>
+
+        <!-- Bottom navigation -->
+        <div class="navigation">
+            <button class="nav-button left-arrow">←</button>
+            <button class="nav-button circle-button"></button>
+            <button class="nav-button right-arrow">→</button>
+        </div>
+    </div>
+</body>
+</html>

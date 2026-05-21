@@ -1,0 +1,634 @@
+/* Reset some basic styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #000000;
+}
+
+/* Banner Styling */
+.banner {
+    background: linear-gradient(to right, #a64ca6, #563d7c); /* Purple gradient */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b1b;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 200px;
+}
+
+.logo img {
+    width: 90px;
+    margin-right: 10px;
+}
+
+.logo span {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+ul.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;  /* Makes the list items appear in a row */
+    gap: 20px;      /* Space between the list items */
+}
+
+/* Style each list item */
+ul.nav-links li {
+    display: inline; /* Ensure they are horizontal */
+}
+
+/* Style for anchor tags inside the list items */
+ul.nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+ul.nav-links a:hover {
+    color: white;  /* Change text color on hover */
+}
+
+
+/* Search Section */
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    margin-right: 10px;
+}
+
+.search button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #555;
+}
+
+
+.row {
+    
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;  /* Centers the content horizontally */
+    align-items: center;
+    text-align: center;       /* Ensures text inside is centered */
+}
+
+.btn{
+    color: #563d7c;
+    border-radius: 50px;
+
+
+}
+#bt1{
+    box-shadow: #7928d2;
+    border-style: inset;
+    border: 2px solid black;
+
+    background-color: #7928d2 ;
+    color: rgb(255, 255, 255);
+    width: 10%;
+    padding: 20px;
+    border-radius: 70px;
+}
+.btn1{
+    
+    border-color: white;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    border-radius: 35px;
+    
+}
+.btn1:hover{
+    background-color: #7928d2;
+}
+#bt2{
+
+  
+    border-color: white;
+    background-color: #000000 ;
+    color: rgb(255, 255, 255);
+    width: 90%;
+    border-radius: 70px;
+}
+
+
+#bt1:hover {
+    background-color: rgb(255, 255, 255); /* Change background color on hover */
+    color: #7928d2; /* Change text color on hover */
+}
+.news-card {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 80%;
+    height: 35vh;
+    margin: 100px auto;
+    
+}
+.news-image img {
+    border-radius: 15px;
+    height:25vh;
+    
+}
+.news-badge {
+   
+    background-color: #00d4ff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+#btn{
+    width: 60%;
+    padding: 5px;
+    background-color: #00000013;
+    border-radius: 30px;
+    border-color: white;
+    color: white;
+}
+.news-card:hover {
+    box-shadow: 0 4px 20px rgb(255, 253, 253); /* Shadow on hover */
+    
+   
+}
+.divs ,h3{
+    color: #f087ff;    
+}
+.divs h3 {
+    font-size: 80px; /* Adjust the size as needed */
+  }
+  
+.para{
+    color: #9D9DAE;
+}
+
+.card1 {
+    margin: 70px;  /* Adjust the margin as needed */
+    /* Adjust the padding as needed */
+    background-color: #000000;
+    
+}
+.card2 {
+    background-color: #000000;
+    padding-left: 49px;
+    margin-left: 45px;
+    margin: 30px;  /* Adjust the margin as needed */
+    padding: 35px; /* Adjust the padding as needed */
+}
+
+.backgroundimg{
+    background-image: url(/images/backgroundimg.webp);
+    color: #1b1b1b;
+    background-color: black;
+}
+
+#bodycard{
+    background-image: url(/images/back2.webp);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background similar to your image */
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* XP card full width */
+.full-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#xp-card {
+    background: linear-gradient(135deg, #1c1c2e, #342a47);
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 100%;
+    max-width: 100%; /* Ensure the XP card takes full width */
+    margin: 0;
+    position: relative;
+    transition: transform 0.3s ease;
+    color: #fff;
+}
+
+#xp-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Second row: Cards each take up 1/3 of the width */
+.card-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background: linear-gradient(135deg, #1c1c2e, #342a47);
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 calc(33.33% - 20px); /* 1/3 of the row with spacing */
+    margin: 0 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+    color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.label {
+    background-color: #a570ff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.arrow-link {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.arrow-link:hover {
+    color: #a570ff;
+}
+/* Growth Section Styles */
+
+.growth-section h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tags {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tag {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tag.active {
+    background-color: #a570ff;
+}
+
+.tag:hover {
+    background-color: #a570ff;
+}
+
+.growth-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.image-column {
+    flex: 1;
+}
+
+.text-column {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.growth-image {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.text-column h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.text-column p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.learn-more-link {
+    font-size: 14px;
+    color: #a570ff;
+    font-weight: bold;
+}
+
+.learn-more-link:hover {
+    text-decoration: underline;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+}
+
+.logo12 {
+    max-width: 100px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.logo:hover {
+    filter: grayscale(0%);
+}
+/* .overlay{ 
+    background-color: #0009;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    bottom: 0%;
+    position: absolute;
+    color: #fff;
+    transition: all .5s;
+    height: 0;
+}
+.card.white.container:hover .overlay {
+    height: 50%;
+    opacity: 1;
+}
+.card.white.container{
+    overflow: hidden;
+}
+
+ */
+
+
+
+
+ .row {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the columns have small gaps between them */
+.col-3 {
+    padding: 2px; /* Adjust padding for columns to 2px for a thin gap */
+}
+
+/* Ensure all cards have the same height */
+.card {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Image takes 50% height of the card */
+.card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Hide the overlay content initially */
+.overlay {
+    position: absolute;
+    top: 50%; /* Overlay appears after image */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Slight black overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Show overlay on hover */
+.card:hover .overlay {
+    opacity: 1;
+}
+
+/* Ensure a uniform size for content */
+.overlay h2 {
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    flex-grow: 1;
+}
+
+.overlay a {
+    align-self: start;
+}
+
+
+/* Keep other cards the same */
+.card {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Image height 50% for cards that have images */
+.card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Hide the overlay content initially for all cards except the special one */
+.card:not(.no-image-card) .overlay {
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 20px;
+    text-align: center;
+}
+
+.card:not(.no-image-card):hover .overlay {
+    opacity: 1;
+}
+
+/* Styling for the special no-image card */
+.no-image-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensures height matches other cards */
+    background-color: white;
+}
+
+.no-image-card .content {
+    text-align: center;
+}
+
+/* Ensure that .no-image-card does not have an image */
+.no-image-card img {
+    display: none; /* Ensure no image is shown */
+}
+
+.no-image-card .overlay {
+    display: none; /* No overlay for this specific card */
+}
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer-section h5 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #00FFAE; /* Solana's brand color */
+}
+
+.footer-managed {
+    text-align: center;
+}
+
+.footer-managed img {
+    width: 150px;
+}
+
+.social-icons img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.footer-legal {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888888;
+}
+
+.language-switcher {
+    margin-top: 10px;
+}
+
+.language-switcher select {
+    background-color: #000000;
+    color: white;
+    border: 1px solid #444;
+    padding: 5px;
+    border-radius: 5px;
+}

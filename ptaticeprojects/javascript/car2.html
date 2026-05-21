@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #B3D4EF;
+        }
+        img {
+            transition: all 0.5s;
+        }
+        .car {
+            transition: transform 1.5s ease-in-out; /* Smoother transition for car movement */
+        }
+        .my-car {
+            width: max-content;
+            transition: transform 1.5s ease-in-out; /* Smoother transition for car movement */
+        }
+        .tyre1 {
+            right: 1%;
+            bottom: 25%;
+            transition: all 1.5s ease-in-out; /* Match tyre movement duration */
+        }
+        .tyre2 {
+            left: 11%;
+            bottom: 25%;
+            transition: all 1.5s ease-in-out; /* Match tyre movement duration */
+        }
+    </style>
+</head>
+<body>
+    <div class="my-car position-relative">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIBS5hUFdiF-Pmio3175RU0BD1Za-Fx6_bBaUQ2BxiiUM8gvWgS4T7Fhmyh-lP4HpJQxU&usqp=CAU" alt="" class="car" >
+        <img width="22%" src="https://tyre-assets-uat.pirelli.com/images/global/461/914/CyberTyreSlider-4505526281542.png" alt="" class="tyre1 tyre position-absolute">
+<img width="22%" src="https://tyre-assets-uat.pirelli.com/images/global/461/914/CyberTyreSlider-4505526281542.png" alt="" class="tyre2 tyre  position-absolute">
+    </div>
+
+    <div class="d-flex justify-content-center gap-2">
+        <button class="btn btn-info">reverse</button>
+        <button class="btn btn-success">Forword</button>
+        <div class="div">
+        <button class="btn btn-outline-warning">Horn</button>
+    </div>
+    
+
+
+    
+    <script>
+        let car = document.querySelector('.my-car');
+        let btn = document.querySelectorAll('.btn');
+        let tyres = document.querySelectorAll('.tyre');
+    
+        btn.forEach((item) => {
+            item.addEventListener('click', () => {
+                if (item.innerHTML === 'Forword') {
+                    // Move the car forward by translating it on the X axis
+                    car.style.transform = `translateX(${window.innerWidth -300}px)`;
+                    
+                    // Rotate tyres when the car moves forward
+                    tyres.forEach((tyre) => {
+                        tyre.style.transform = 'rotate(360deg)';
+                    });
+                } else if (item.innerHTML=='reverse'){
+                    car.style.transform = `translateX(0px)`;
+                    
+                    // Rotate tyres when the car moves forward
+                    tyres.forEach((tyre) => {
+                        tyre.style.transform = 'rotate(-360deg)';
+                    });
+                }
+                else{
+                    let audio =new Audio('./horn.wav');
+                    audio.play();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+

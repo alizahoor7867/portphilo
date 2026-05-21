@@ -1,0 +1,171 @@
+:root{
+    --primary:#21A5D5;  
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width:70%;
+    margin: auto;
+}
+.head-section{
+    background-color: var(--primary);
+}
+.header-left i{
+    color: black;
+}
+
+.header-left,  .email, .address{
+    display: flex;
+    gap: 0.5rem;
+    color: white;
+}
+.header-right i{
+    margin: 0 0.7rem;
+    color: white;
+}
+
+.nav-section{
+    box-shadow: 1px 1px 4px 3px lightgray;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    padding: 0.5rem;
+}
+nav ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.btn button{
+    padding: 0.5rem;
+    border-radius: 40px;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+}
+
+.bi-list{
+    font-size: 2rem;
+    display: none;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    gap: 2rem;
+
+}
+main h2{
+    color: black;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+.Demo{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 40px;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+}
+.solution{
+    
+    background-image: url('https://simplexts.net/wp-content/uploads/2023/12/Untitled-design-10-1-1.png');
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height:90vh;
+}
+.services ul{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 1330px) {
+    header, nav {
+        width: 85%;
+    }
+    .simple-left{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1150px) {
+    header, nav {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .bi-list {
+        display: block;
+    }
+}
+
+@media (max-width: 850px) {
+    header {
+        width: 100%;
+    }
+    .header-right {
+        display: flex;
+        justify-self: flex-start;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        justify-content: flex-start;
+    }
+    .header-left {
+        display: none;
+    }
+    main{
+        flex-direction: column;
+    }
+    main .simple-right{
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .services ul{
+        flex-direction: column;
+    }
+
+}
+@media (max-width: 450px) {
+    .btn{
+        display: none;
+    }
+   
+   
+}

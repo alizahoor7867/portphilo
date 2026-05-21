@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+        img{
+            transition: all 0.5s;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="https://hyundai-nishat.com/wp-content/uploads/2023/11/Elantra-Side-Transparent.webp" alt=""
+    class="car">
+    <div class="d-flex justify-content-center gap-2" style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 10;">
+        <button class="btn btn-info">reverse</button>
+        <button class="btn btn-success">Forword</button>
+    </div>
+    
+    <script>
+        let car = document.querySelector('.car');
+        let btn = document.querySelectorAll('.btn');
+    
+        btn.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                if (item.innerHTML == 'Forword') {
+                    // Move the car forward by translating it on the X axis
+                    car.style.transform = 'translateX(900px)';
+                }
+                else
+                {
+                    car.style.transform = 'translateX(-8px)';
+
+                }
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>

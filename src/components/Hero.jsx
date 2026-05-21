@@ -33,7 +33,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900"
     >
       {/* 3D Background */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0" style={{ zIndex: -1 }}>
         <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[3, 2, 1]} intensity={1} />
