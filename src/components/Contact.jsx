@@ -41,7 +41,7 @@ export default function Contact() {
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'az3269868@gmail.com', href: 'mailto:az3269868@gmail.com' },
     { icon: Phone, label: 'Phone', value: '+92 312 0279996', href: 'tel:+923120279996' },
-    { icon: MapPin, label: 'Location', value: 'Pakistan', href: null },
+    { icon: MapPin, label: 'Location', value: 'Islamabad, Pakistan', href: null },
   ]
 
   return (

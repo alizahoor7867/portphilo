@@ -10,6 +10,7 @@ import Contact from './components/Contact'
 import { FaWhatsapp } from 'react-icons/fa'
 import CustomCursor from './components/CustomCursor'
 import ParticleBackground from './components/ParticleBackground'
+import Navbar from './components/Navbar'
 
 function App() {
   // Initialize smooth scroll
@@ -45,6 +46,7 @@ function App() {
 
       <CustomCursor />
       <ParticleBackground />
+      <Navbar />
       <div className="relative" style={{ zIndex: 2 }}>
         {/* Main Content */}
         <Hero />

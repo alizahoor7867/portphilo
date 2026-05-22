@@ -29,7 +29,7 @@ export default function Projects() {
       title: 'StayNexus Agency',
       description: 'A live real estate & stay booking agency website with property listings and booking system.',
       fullDescription: 'A professional live agency website for StayNexus, featuring property listings, booking management, contact forms, and a modern responsive design tailored for real estate and hospitality.',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop',
+      image: '/staynexus.jpeg',
       tech: ['React', 'Node.js', 'Tailwind CSS', 'MongoDB'],
       github: 'https://github.com/alizahoor7867',
       live: 'https://staynexus.agency/',
@@ -162,11 +162,13 @@ export default function Projects() {
                 >
                   <X className="w-6 h-6" />
                 </button>
+                <a href={selectedProject.live} target="_blank" rel="noopener noreferrer">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-64 object-cover rounded-t-2xl"
+                  className="w-full h-64 object-cover rounded-t-2xl hover:opacity-80 transition-opacity cursor-pointer"
                 />
+                </a>
                 <div className="p-8">
                   <h3 className="text-3xl font-bold mb-4 gradient-text">{selectedProject.title}</h3>
                   <p className="text-slate-300 text-lg mb-6">{selectedProject.fullDescription}</p>

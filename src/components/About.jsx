@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import CountUp from 'react-countup'
-import { Code2, Rocket, Award, Coffee } from 'lucide-react'
+import { Code2, Rocket, Award, Coffee, GraduationCap, BookOpen } from 'lucide-react'
 
 export default function About() {
   const [ref, inView] = useInView({
@@ -110,21 +110,14 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-16"
         >
-          <h3 className="text-2xl font-bold text-center mb-8 gradient-text">
-            Tech Stack
-          </h3>
+          <h3 className="text-2xl font-bold text-center mb-8 gradient-text">Tech Stack</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {techStack.map((category, index) => (
               <div key={index} className="card">
-                <h4 className="text-xl font-semibold text-primary-400 mb-4">
-                  {category.category}
-                </h4>
+                <h4 className="text-xl font-semibold text-primary-400 mb-4">{category.category}</h4>
                 <ul className="space-y-2">
                   {category.skills.map((skill, skillIndex) => (
-                    <li
-                      key={skillIndex}
-                      className="text-slate-300 flex items-center gap-2"
-                    >
+                    <li key={skillIndex} className="text-slate-300 flex items-center gap-2">
                       <span className="w-2 h-2 bg-accent-500 rounded-full"></span>
                       {skill}
                     </li>
@@ -132,6 +125,51 @@ export default function About() {
                 </ul>
               </div>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Education */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-16"
+        >
+          <h3 className="text-2xl font-bold text-center mb-8 gradient-text">Education & Training</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+
+            <div className="card border-primary-500/30 hover:border-primary-500/60">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-primary-500/20">
+                  <GraduationCap className="w-6 h-6 text-primary-400" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-1">BS Computer Science</h4>
+                  <p className="text-primary-400 font-semibold text-sm mb-1">Abasyn University, Islamabad</p>
+                  <p className="text-slate-400 text-sm">2022 — 2026</p>
+                  <p className="text-slate-300 text-sm mt-2">Bachelor's degree in Computer Science with focus on software engineering and web development.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card border-accent-500/30 hover:border-accent-500/60">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-accent-500/20">
+                  <BookOpen className="w-6 h-6 text-accent-400" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-1">Full Stack Web Development</h4>
+                  <p className="text-accent-400 font-semibold text-sm mb-1">PNYI Institute, Rawalpindi</p>
+                  <p className="text-slate-400 text-sm">6 Months Professional Course</p>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {['ASP.NET', 'Angular', 'SQL Server', 'C#'].map((t, i) => (
+                      <span key={i} className="px-2 py-0.5 text-xs rounded-full bg-accent-500/20 border border-accent-500/30 text-accent-300">{t}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </motion.div>
       </div>
